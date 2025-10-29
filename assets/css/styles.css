@@ -149,4 +149,11 @@ a:hover { text-decoration: underline; }
   .site-nav.open .dropdown-menu { position: static; display: grid; padding: 0; border: 0; box-shadow: none; }
 }
 
+@media (max-width: 600px) {
+  .hero picture img { max-height: 56vh; }
+  .hero-content { margin-top: -32vh; padding-bottom: 10vh; text-align: center; }
+  .hero-ctas { justify-content: center; flex-wrap: wrap; }
+  .wide-banner-img { height: 200px !important; }
+}
+
 

@@ -9,4 +9,23 @@
 	});
 })();
 
+// Dropdown toggle for touch devices
+(function () {
+	var nav = document.querySelector('.site-nav');
+	if (!nav) return;
+	nav.addEventListener('click', function (e) {
+		var target = e.target;
+		if (target && target.classList && target.classList.contains('dropdown-toggle')) {
+			e.preventDefault();
+			var parent = target.closest('.has-dropdown');
+			if (!parent) return;
+			var menu = parent.querySelector('.dropdown-menu');
+			if (!menu) return;
+			if (nav.classList.contains('open')) {
+				menu.style.display = menu.style.display === 'grid' || menu.style.display === 'block' ? 'none' : 'grid';
+			}
+		}
+	});
+})();
+
 
