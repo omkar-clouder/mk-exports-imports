@@ -28,4 +28,13 @@
 	});
 })();
 
+// Register service worker for offline/slow network support
+(function () {
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function () {
+			navigator.serviceWorker.register('./sw.js');
+		});
+	}
+})();
+
 
